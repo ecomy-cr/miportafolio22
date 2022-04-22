@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Plataforma oficiales securtec </title>
+	<title>marcar entrada</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{url_for('static', filename='miportafoliox/home_oficiales/cssx/main.css')}}" />
+	<noscript><link rel="stylesheet" href="{{url_for('static', filename='miportafoliox/home_oficiales/cssx/noscript.css')}}" /></noscript>
+
+	<style>
+		body{
+			background:#b4b4b4;
+		}
+
+		#registration-form {
+			font-family:'Open Sans Condensed', sans-serif;
+			width: 400px;
+			min-width:250px;
+			margin: 20px auto;
+			position: relative;
+		}
+
+		#registration-form .fieldset {
+			background-color:#112526;
+
+			border-radius: 3px;
+
+		}
+
+		#registration-form legend {
+			text-align: center;
+			background: #364351;
+			width: 100%;
+			padding: 30px 0;
+			border-radius: 3px 3px 0 0;
+			color: white;
+			font-size:2em;
+		}
+
+		.fieldset form{
+			border:1px solid #2f2f2f;
+			margin:0 auto;
+			display:block;
+			width:100%;
+			padding:30px 20px;
+			box-sizing:border-box;
+			border-radius:0 0 3px 3px;
+		}
+
+		/* all */
+		::-webkit-input-placeholder { text-shadow:1px 1px 1px white; font-weight:bold; }
+		::-moz-placeholder { text-shadow:0 1px 1px white; font-weight:bold; } /* firefox 19+ */
+		:-ms-input-placeholder { text-shadow:0 1px 1px white; font-weight:bold; } /* ie */
+		#registration-form input[type=text] {
+			padding: 19px 35px;
+			border-radius: 1px;
+			margin:5px auto;
+			background-color:#f7f7f7;
+			border: 1px solid silver;
+			color: black;
+
+			font-size: 1.3em;
+			font-weight: bold;
+
+
+			-webkit-box-shadow: inset 0 1px 5px rgba(0,0,0,0.2);
+			box-shadow: inset 0 1px 5px rgba(0,0,0,0.2), 0 1px rgba(255,255,255,.8);
+			width: 100%;
+
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+			-webkit-transition:background-color .5s ease;
+			-moz-transition:background-color .5s ease;
+			-o-transition:background-color .5s ease;
+			-ms-transition:background-color .5s ease;
+			transition:background-color .5s ease;
+		}
+		.no-placeholder #registration-form input[type=text] {
+			padding: 10px 20px;
+		}
+
+		#registration-form input[type=text]:active, .placeholder #registration-form input[type=text]:focus {
+			outline: none;
+			border-color: silver;
+			background-color:white;
+		}
+
+		#registration-form input[type=submit] {
+			font-family:'Open Sans Condensed', sans-serif;
+			text-transform:uppercase;
+			outline:none;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+			width: 100%;
+			height: 89px;
+
+			background-color: #000000;
+			padding: 22px;
+			color: white;
+
+			border: 1px solid #23666e;
+			border-radius: 3px;
+
+
+			font-size: 1.5em;
+			font-weight: bold;
+
+			margin-top: 38px;
+			cursor: pointer;
+			position:relative;
+			top:8;
+		}
+
+		#registration-form input[type=submit]:hover {
+			background-color: #20694e;
+		}
+
+		#registration-form input[type=submit]:active {
+			background:#5C8CA7;
+		}
+
+
+		.parsley-error-list{
+			background-color:#C34343;
+			padding: 5px 11px;
+			margin: 0;
+			list-style: none;
+			border-radius: 0 0 3px 3px;
+			margin-top:-5px;
+			margin-bottom:5px;
+			color:white;
+			border:1px solid #870d0d;
+			border-top:none;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			position:relative;
+			top:-1px;
+			text-shadow:0px 1px 1px #460909;
+			font-weight:700;
+			font-size:12px;
+		}
+		.parsley-error{
+			border-color:#870d0d!important;
+			border-bottom:none;
+		}
+		#registration-form select{
+			width:100%;
+			padding:5px;
+		}
+		::-moz-focus-inner {
+			border: 0;
+		}
+	</style>
+
+
+</head>
+<body class="is-preload">
+
+	<div id="registration-form">
+
+		<div class='fieldset'>
+			<form action="{{ url_for('comentario.horaentradaf') }}" method="post" data-validate="parsley"></br></br>
+				<h2 for="email">Codigo del oficial</h2></br>
+				<input type="text" placeholder=":" id= 'codigo' name='codigo' data-required="true" placeholder = ':' data-error-message="datos erroneos">
+</br></br></br>
+                <h2 for="email">Nombre del puesto/x20</h2></br>
+				<input type="text" placeholder=":" id= 'puesto' name='puesto' placeholder = ':' data-required="true" data-error-message="datos erroneos">
+</br></br></br>
+				<input type="submit" value="Marcar entrada" name=""></br></br></br>
+				<p style="padding:7px; "><a href="{{ url_for('comentario.homef') }}"> A T R A S</a></p>
+			</form>	</br></br>
+
+			       <h2 >{{ mensaje }}</h2>
+       <h3> {{fechass}}</h3>
+		</div>
+	</br></br>
+
+	</div>
+</body>
+</html>

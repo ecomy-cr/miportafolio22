@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Curriculum Vitae</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href=" {{url_for('static', filename='miportafoliox/cv/img/favicon.ico' )}}">
+    <link rel="stylesheet" href=" {{url_for('static', filename='miportafoliox/cv/css/bootstrap.min.css' )}}">
+    <link rel=" stylesheet " href="{{url_for('static', filename='miportafoliox/cv/css/owl.carousel.min.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/slicknav.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/flaticon.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/animate.min.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/magnific-popup.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/themify-icons.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/slick.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/nice-select.css' )}}">
+    <link rel="stylesheet " href=" {{url_for('static', filename='miportafoliox/cv/css/style.css' )}}">
+
+    <style>
+        .myback {
+            background: rgb(183, 75, 75);
+            text-transform: uppercase;
+            border-radius: 33%;
+        }
+        
+        .myskil {
+            width: 50%;
+            margin: 60px auto;
+            color: rgb(58, 175, 50);
+            background-color: rgb(127, 127, 127);
+            border-radius: 15%;
+            padding: 20px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+        
+        .mybar {
+            background: #353b48;
+            display: block;
+            height: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+        
+        .mybar :hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.22);
+        }
+        
+        .mybar span {
+            height: 20px;
+            float: left;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(128, 128, 128, 1) 75%, rgba(0, 0, 0, 1) 100%);
+        }
+        
+        .python {
+            width: 90%;
+            animation: python 3s;
+        }
+        
+        .flask {
+            width: 70%;
+            animation: python 3s;
+        }
+        
+        .django {
+            width: 59%;
+            animation: python 3s;
+        }
+        
+        .kivy {
+            width: 70%;
+            animation: python 3s;
+        }
+        
+        .tkinter {
+            width: 70%;
+            animation: python 3s;
+        }
+        
+        .css {
+            width: 30%;
+            animation: python 3s;
+        }
+        
+        .sqlite {
+            width: 70%;
+            animation: mykeyframe 3s;
+        }
+        
+        .joko {
+            width: 40%;
+            animation: mykeyframe 3s;
+        }
+        
+        .bostra {
+            width: 30%;
+            animation: mykeyframe 3s;
+        }
+        
+        .reaco {
+            width: 50%;
+            animation: mykeyframe 3s;
+        }
+        
+        .nativos {
+            width: 59%;
+            animation: mykeyframe 3s;
+        }
+        
+        .mysqlo {
+            width: 59%;
+            animation: mykeyframe 3s;
+        }
+        
+        .postgress {
+            width: 70%;
+            animation: mykeyframe 3s;
+        }
+        
+        .mongos {
+            width: 59%;
+            animation: mykeyframe 3s;
+        }
+        
+        .composee {
+            width: 50%;
+            animation: mykeyframe 3s;
+        }
+        
+        @keyframes python {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 90%;
+            }
+        }
+        
+        @keyframes mykeyframe {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-area header-transparent ">
+            <div class="main-header ">
+                <div class="header-bottom header-sticky ">
+                    <div class="container-fluid ">
+                        <div class="row align-items-center ">
+                            <div class="col-xl-2 col-lg-2 col-md-1 ">
+                                <div class="logo ">
+                                    <a href="/"><img src=" {{url_for('static', filename='miportafoliox/cv/img/logo/logo.png' )}}" alt=" "></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10 col-md-8 ">
+                                <div class="main-menu f-right d-none d-lg-block ">
+                                    <nav>
+
+
+
+                                        <ul id="navigation ">
+                                            <li><a href="{{url_for( '.miperfil')}} ">@Home</a></li>
+                                            <li><a href="/oficiales ">@Oficiales SCT</a></li>
+                                            <li><a href="/sanagustin ">@Condominios SCT</a></li>
+                                            <li class="login "><a href="# "><i class="ti-user "></i>Users</a> </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="mobile_menu d-block d-lg-none ">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="slider-area hero-overly ">
+            <div class="single-slider hero-overly slider-height d-flex align-items-center ">
+                <div class="container ">
+                    <div class="row justify-content-center ">
+                        </br>
+                        <div class="col-xl-8 col-lg-9 ">
+                            <div>
+                                <div class="hero__caption ">
+                                    <h1 style="font-size: 3.1em "><strong></br></br>YEISSON ARAYA</strong></h1>
+                                    </br>
+                                    <a href="https://wa.me/50686246195 " class="btn ">SOLICITAR Curriculum
+                                        Vitae</a></br>
+                                    </br>
+                                </div>
+                                </br>
+                                </br>
+                                </br>
+                            </div>
+                            </br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popular-location section-padding30 ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-12 ">
+                        <div class="section-tittle text-center mb-80 ">
+                            <span style="font-size: 2.7em ">MIS PROYECTOS</span>
+                            <h5><strong>Aplicaciones Web</br>Aplicaciones Android KivyMD</br>Aplicaciones IOs React
+                                    Native</br>Windows Desktop Apps</strong></h5>
+                            <h5><strong>{Python Backend & PostgreSQL}</strong></h5>
+                            </br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-location mb-30 ">
+                            <div class="location-img ">
+                                <img src=" {{url_for('static', filename='miportafoliox/cv/img/gallery/location1.png' )}}" alt=" ">
+                            </div>
+                            <div class="location-details ">
+                                <p>CM-Condominios 2021</p>
+                                <a href="/sanagustin " class="location-btn "> Vista previa </a>
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                    </br>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-location mb-30 ">
+                            <div class="location-img ">
+                                <img src=" {{url_for('static', filename='miportafoliox/cv/img/gallery/location2.png' )}}" alt=" ">
+                            </div>
+                            <div class="location-details ">
+                                <p>Administrador CM-2021</p>
+                                <a href="# " class="location-btn ">De pago</a>
+
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                    </br>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-location mb-30 ">
+                            <div class="location-img ">
+                                <img src=" {{url_for( 'static', filename='miportafoliox/cv/img/gallery/location3.png' )}}" alt=" ">
+                            </div>
+
+
+                            <div class="location-details ">
+                                <p>CM-Oficiales 2021</p>
+                                <a href="/oficiales " class="location-btn "> Vista </a>
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                    </br>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-location mb-30 ">
+                            <div class="location-img ">
+                                <img src=" {{url_for( 'static', filename='miportafoliox/cv/img/gallery/location4.png' )}}" alt=" ">
+                            </div>
+                            <div class="location-details ">
+                                <p>@Ahorros-Kom</p>
+
+                                <a href="# " class="location-btn ">De pago</a>
+
+
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                    </br>
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-location mb-30 ">
+                            <div class="location-img ">
+                                <img src=" {{url_for( 'static', filename='miportafoliox/cv/img/gallery/location5.png' )}}" alt=" ">
+                            </div>
+                            <div class="location-details ">
+                                <p>@Control_Vehícular SCT</p>
+                                <a href="# " class="location-btn "> Vista previa </a>
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                    </br>
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-location mb-30 ">
+                            <div class="location-img ">
+                                <img src=" {{url_for( 'static', filename='miportafoliox/cv/img/gallery/location6.png' )}}" alt=" ">
+                            </div>
+                            <div class="location-details ">
+                                <p>Proyectos gratis</p>
+                                <a href="# " class="location-btn "> ecomyCode </a>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                </div>
+                </br>
+            </div>
+        </div>
+
+        <div class="services-area pt-150 pb-150 section-bg " style="background: #030305;">
+            <div class="container" >
+                <div class="row ">
+                    <div class="col-lg-12 ">
+
+                        <div class="section-tittle section-tittle2 text-center mb-80" style="margin-top: 1cm;">
+
+                            <span style="font-size: 2.5em ">Experiencia laboral</span>
+                            <hr />
+                        </div>
+
+                    </div>
+                </div>
+                </br>
+
+                <div class="row ">
+
+                    <div class="col-lg-12 ">
+                        <div class="single-services text-center mb-50 ">
+                            <div class="text-center services-cap ">
+
+                                <h5><a href="# ">Supervisor de seguridad GAM</a></h5>
+                                <h5><a href="# ">Respuesta armada</a></h5>
+                                <h5><a href="# ">Escolta de contenedores</a></h5>
+                                <h5><a href="# ">Desarrollador de aplicación administrativa</a></h5>
+                                <h5><a href="# ">Encargado Técnico T.I</a></h5>
+                                <h5><a href="# ">Departamento de becas I.T.N</a></h5>
+                                <h5><a href="# ">Oficial de Monitoreo y Vigilancia</a></h5>
+                                <h5><a href="# ">Seguridad Privada</a></h5>
+                                <h5><a href="# ">Proyecto e-commerce ecomycr</a></h5>
+                                <h5><a href="# ">Python Programming Language courses</a></h5>
+                                <h5><a href="# ">Instructor computacional</a></h5>
+                                <h5><a href="# ">Palma Aceitera & Ganadería</a></h5>
+
+                                <h5><a href="# ">Otros...</a></h5>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                <div class="services-icon ">
+                                    <span class="flaticon-list "></span>
+                                </div>
+                                <div class="services-icon ">
+                                    <span class="flaticon-respect "></span>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="peoples-visit dining-padding-top ">
+            <div class="single-visit ">
+                <div class="container ">
+                    <div class="row justify-content-end ">
+                        <div class="col-lg-12 myback ">
+
+                            <div class="myskil ">
+                                <h1 style="text-align: center; ">
+                                    SKILLS</h1>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 13px; font-weight: bold; ">
+                                        Python3-OPENCV-NUMPY
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="python "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">89%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        Flask
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="flask "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">70%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        Django
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="django "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">50%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        Kivy & KivyMD
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="kivy "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">70%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        Tkinter
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="tkinter "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">70%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        CSS
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="css "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">30%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        SQLITE3
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="sqlite "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">70%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        Javascript
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="joko "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">44%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        Bootstrap
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="bostra "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">33%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        React JS
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="reaco "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">44%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 14px; font-weight: bold; ">
+                                        React Native - expo
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="nativos "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">44%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        Mysql
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="mysqlo "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">70%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        PostgreSQL
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="postgress "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">59%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        MOngo db
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="mongos "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">59%
+                                        </span>
+                                    </span>
+                                </li>
+                                <li style="margin: 20px 0; padding: 10px; ">
+                                    <h3 style="margin: 5px; font-size: 18px; font-weight: bold; ">
+                                        DOCKER COMPOSE - GIT
+                                    </h3>
+                                    <span class="mybar ">
+                                        <span id="porcentaje " class="composee "
+                                            style="font-weight: bold;text-align: right; color: rgb(0, 0, 0) ">50%
+                                        </span>
+                                    </span>
+                                </li>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-area ">
+            <div class="container ">
+                <div class="footer-top footer-padding ">
+                    <div class="row justify-content-between ">
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 ">
+                            <div class="single-footer-caption mb-50 ">
+                                <div class="single-footer-caption mb-30 ">
+                                    <div class="footer-logo ">
+                                        <a href="index.html "><img src="{{url_for( 'static', filename='miportafoliox/cv/img/logo/logo2_footer.png' )}}" alt=" "></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 ">
+                            <div class="single-footer-caption mb-50 ">
+                                <div class="footer-tittle ">
+                                    <h4>Aplicaciones 2021</h4>
+                                    <ul>
+                                        <li><a href="/oficiales ">@Oficiales</a></li>
+                                        <li><a href="/sanagustin ">@Condominios</a></li>
+                                        <li><a href="# ">@esph_unidades_vehicular</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 ">
+                            <div class="single-footer-caption mb-50 ">
+                                <div class="footer-tittle ">
+                                    <h4>Descargar apps</h4>
+                                    <ul>
+                                        <li class="app-log ">
+                                            <a href="# "><img src=" {{url_for( 'static', filename='miportafoliox/cv/img/gallery/app-logo.png' )}}" alt=" "></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom ">
+                    <div class="row d-flex justify-content-between align-items-center ">
+                        <div class="col-xl-9 col-lg-8 ">
+                            <div class="footer-copy-right ">
+                                <p>&copy;YeissonAraya Costa Rica</p>
+                                <p>Todos los derechos reservados.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="back-top ">
+        <a title="Go to Top " href="/ "> <i class="fas fa-level-up-alt "></i></a>
+    </div>
+
+
+</body>
+
+</html>
