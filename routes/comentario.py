@@ -28,7 +28,7 @@ sessionx = session_maker()
 comentario = Blueprint("comentario", __name__)
 
 
-@comentario.route('/')
+@comentario.route('/comentario')
 def index():
     comentario = Comentario.query.all()
     print(comentario)
@@ -84,7 +84,7 @@ def delete(id):
 
 
 
-@comentario.route('/miperfil')
+@comentario.route('/')
 def miperfil():
     return render_template('miportafoliox/miperfil.html')
 
